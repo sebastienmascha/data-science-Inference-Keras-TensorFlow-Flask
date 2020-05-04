@@ -1,0 +1,10 @@
+version: "3"
+services:
+  tf_serving_pets:
+    image: 'tensorflow/serving'
+    environment:
+      - MODEL_NAME=pets
+    ports:
+      - '8501:8501'
+    volumes:
+      - './pets:/models/pets/1'
